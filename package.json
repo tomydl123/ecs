@@ -1,0 +1,18 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tomydl123 <35600734+tomydl123@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "new": "node scripts/new-post.js",
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "devDependencies": {
+    "@vuepress/theme-blog": "^2.2.0",
+    "moment": "^2.27.0",
+    "vuepress": "^1.5.2",
+    "yargs": "^15.3.1"
+  }
+}
