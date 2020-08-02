@@ -1,5 +1,5 @@
 module.exports = {
-    title: '个人博客名称',
+    title: '大花花日记',
     theme: '@vuepress/theme-blog',
     themeConfig: {
       directories:[
