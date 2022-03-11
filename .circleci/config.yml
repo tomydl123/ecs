@@ -6,7 +6,7 @@ jobs:
   #------------------------------------------------------------
   install-dependencies:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:16.13.1
     steps:
       - checkout
 
