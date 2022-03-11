@@ -1,15 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        for(let i = 0; i < 128; i++) {
-            console.log(String.fromCharCode(i));
+    <title>事件委托</title>
+    <style>
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
         }
+
+        ul {
+            border: 1px solid red;
+        }
+
+        li {
+            margin: 5px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+        }
+
+        span {
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>
+            <span>save</span>
+        </li>
+        <li>
+            <span>load</span>
+        </li>
+        <li>
+            <span>search</span>
+        </li>
+    </ul>
+
+    <script>
+        // let worker = {
+        //     someMethod() {
+        //         return 1;
+        //     },
+
+        //     slow(x) {
+        //         alert("Called with " + x);
+        //         return x * this.someMethod(); // (*)
+        //     }
+        // };
+
+        // function cachingDecorator(func) {
+        //     let cache = new Map();
+        //     return function (x) {
+        //         if (cache.has(x)) {
+        //             return cache.get(x);
+        //         }
+        //         let result = func.call(this, x); // 现在 "this" 被正确地传递了
+        //         cache.set(x, result);
+        //         return result;
+        //     };
+        // }
+
+        // worker.slow = cachingDecorator(worker.slow); // 现在对其进行缓存
+
+        // alert(worker.slow(2)); // 工作正常
+        // alert(worker.slow(2)); // 工作正常，没有调用原始函数（使用的缓存）
+
+
+        function foo(i) {
+            if (i < 0)
+                return;
+            console.log('begin:' + i);
+            foo(i - 1);
+            console.log(444)
+            console.log('end:' + i);
+        }
+        foo(1);
     </script>
 </body>
+
 </html>
