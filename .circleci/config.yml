@@ -62,7 +62,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - "7a:69:4d:12:89:f0:9b:be:29:c6:bf:18:e7:78:a9:f4"
+            - "43:b9:67:4e:7c:08:eb:89:55:96:e6:f9:82:cd:c8:d1"
       
       - run:
           name: Deploy Over Rsync
