@@ -67,7 +67,7 @@ jobs:
       - run:
           name: Deploy Over Rsync
           command: |
-            rsync -az --progress --delete-after -e "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" .vuepress/dist/ $SSH_DEPLOY_USER@$SSH_HOST:/etc/nginx/html
+            rsync -az --progress --delete-after -e "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" .vuepress/dist/ $SSH_DEPLOY_USER@$SSH_HOST:/usr/share/nginx/html
 workflows:
   build:
     jobs:
