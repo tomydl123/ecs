@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@vuepress/theme-blog": "^2.2.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "vuepress": "^1.5.2",
     "yargs": "^15.3.1"
   }
